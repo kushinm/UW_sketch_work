@@ -86,8 +86,8 @@ def render_svg_color(paths,
     ## render out to svg file
     #print('Rendering out to {}'.format(os.path.join(out_dir,out_fname)))
    
-    if not os.path.exists(out_dir):
-        os.makedirs(out_dir)
+    if not os.path.exists(os.path.join(base_dir,out_dir)):
+        os.makedirs(os.path.join(base_dir,out_dir))
     wsvg(paths,
          attributes=[{'stroke-width':stroke_width,
                       'stroke-linecap':stroke_linecap,
@@ -119,3 +119,8 @@ def svg_to_png(svg_paths,
         os.system(cmd_string)
         clear_output(wait=True)
         
+        
+
+
+
+

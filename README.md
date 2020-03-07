@@ -5,7 +5,7 @@ This is a temporary repository for materials relating to sketching projects at U
 ```
 project
 │   README.md
-│   file001.txt    
+│   requirements.txt    
 │
 └───code
 │   │   file011.txt

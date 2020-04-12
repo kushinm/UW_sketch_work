@@ -92,9 +92,9 @@ def save_features(Features, Y, layer_num, data_type,out_dir='/data/jefan/semanti
     else:
         channel_norm_flag = 'no-channel-norm'
     layers = ['P1','P2','P3','P4','P5','FC6','FC7']
-    np.save(os.path.join(out_dir,'FEATURES_{}_{}_{}_lesioned.npy'.format(layers[int(layer_num)], data_type, channel_norm_flag)), Features)
-    np.savetxt(os.path.join(out_dir,'FEATURES_{}_{}_lesioned.txt'.format(layers[int(layer_num)], data_type, channel_norm_flag)), Features, delimiter=',') ## also save as txt file
-    Y.to_csv(os.path.join(out_dir,'METADATA_{}_lesioned.csv'.format(data_type)), index=True, index_label='feature_ind')
+    np.save(os.path.join(out_dir,'FEATURES_{}_{}_{}_triplets_128.npy'.format(layers[int(layer_num)], data_type, channel_norm_flag)), Features)
+    np.savetxt(os.path.join(out_dir,'FEATURES_{}_{}_triplets_128.txt'.format(layers[int(layer_num)], data_type, channel_norm_flag)), Features, delimiter=',') ## also save as txt file
+    Y.to_csv(os.path.join(out_dir,'METADATA_{}_triplets_128.csv'.format(data_type)), index=True, index_label='feature_ind')
     print('Saved features out to {} Channel norm is {}'.format(out_dir, channel_norm))
     return layers[int(layer_num)]
 

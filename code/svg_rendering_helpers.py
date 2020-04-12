@@ -70,7 +70,7 @@ def render_svg(paths,
     
 def render_svg_color(paths,
                      stroke_colors,
-               stroke_width = 5,
+               stroke_width = 4,
                stroke_linecap = 'round',
                fill_mode = 'none',
                viewbox=[0, 0, 300, 300],
@@ -84,7 +84,7 @@ def render_svg_color(paths,
     '''
 
     ## render out to svg file
-    #print('Rendering out to {}'.format(os.path.join(out_dir,out_fname)))
+    print('Rendering out to {}'.format(os.path.join(out_dir,out_fname)))
    
     if not os.path.exists(os.path.join(base_dir,out_dir)):
         os.makedirs(os.path.join(base_dir,out_dir))
